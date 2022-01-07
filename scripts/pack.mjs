@@ -51,7 +51,7 @@ if (!fsync.existsSync('./tmp/assets.zip')) {
 
 
 console.log('extracting assets...')
-await extract('./tmp/assets.zip', { dir: path.join(__dirname, '..', 'dist') })
+await extract('./tmp/assets.zip', { dir: path.join(__dirname, '..', 'dist', 'assets') })
 console.log('assets extracted')
 
 console.log('minifiying...')
