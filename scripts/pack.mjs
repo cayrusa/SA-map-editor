@@ -50,10 +50,11 @@ if (!fsync.existsSync('./tmp/assets.zip')) {
 }
 
 
-console.log('extracting assets')
+console.log('extracting assets...')
 await extract('./tmp/assets.zip', { dir: path.join(__dirname, '..', 'dist') })
+console.log('assets extracted')
 
-
+console.log('minifiying...')
 const minified = minify(libFiles.concat(srcFiles))
 
 if (minified.warnings)
@@ -65,7 +66,7 @@ await fs.writeFile('./dist/TI3SA.min.js', minified.code);
 if (minified.map)
     await fs.writeFile('./dist/TI3SA.min.js.map', minified.map);
 
-console.log("Written js")
+console.log("minified")
 
 async function readFiles(p) {
     const lib = await fs.readdir(p);

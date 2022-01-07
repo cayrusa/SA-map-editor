@@ -144,8 +144,9 @@
 			tmp.removeAllEventListeners();
 
 			tmp.cursor = "default";
+			cMap.TilesUpdated();
 		};
-		stage.removeChild(this);
+			stage.removeChild(this);
 		this.removeAllEventListeners();
 	};
 
@@ -247,6 +248,7 @@
 			cMap.addChildAt(newTile, 0);
 			newTile.removeAllEventListeners();
 
+			cMap.TilesUpdated();
 			newTile.cursor = "default";
 			cPanel.populate(cPanel.activePanel, true);
 		} else if (this.clonedFrom.parent === cMap) {

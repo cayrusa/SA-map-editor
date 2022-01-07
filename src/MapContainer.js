@@ -1,6 +1,6 @@
 "use strict";
 (function () {
-	function MapContainer (x, y, maxZoom){
+	function MapContainer(x, y, maxZoom) {
 		this.Container_constructor();
 		this.x = x;
 		this.y = y;
@@ -10,7 +10,7 @@
 		this.minScaleX;
 		this.maxScaleX;
 		this.maxScaleY;
-		
+
 		this.scaleX = this.minScaleX;
 		this.scaleY = this.minScaleY;
 
@@ -18,42 +18,47 @@
 
 		this.mapTiles = [];
 
-		this.addEventListeners();		
-	};
+		this.addEventListeners();
+		};
 
 	createjs.extend(MapContainer, createjs.Container);
 
-	MapContainer.prototype.addEventListeners = function (){
-  		this.on("mousedown", this.mouseDown, this);
-	};	
-	
-	MapContainer.prototype.loadJSON = function(){
-		if (window.File && window.FileReader && window.Blob){
+	MapContainer.prototype.TilesUpdated = function () {
+		const set = Object.keys(this.mapTiles).map(k => this.mapTiles[k].edition)
+		console.log("updating", [...new Set(set)]);
+	}
+
+	MapContainer.prototype.addEventListeners = function () {
+		this.on("mousedown", this.mouseDown, this);
+	};
+
+	MapContainer.prototype.loadJSON = function () {
+		if (window.File && window.FileReader && window.Blob) {
 			var input = document.createElement('input');
 			var t = this;
 			input.display = "none";
 			input.type = "file";
 			input.accept = ".t3m";
-			input.addEventListener("change", function(event){handleJSONLoad(event, input, t);}, false);
+			input.addEventListener("change", function (event) { handleJSONLoad(event, input, t); }, false);
 			input.click();
 		} else {
 			alert("Your browser does not support the necessary File API");
 		};
 	};
 
-	function handleJSONLoad(event, input, t){
+	function handleJSONLoad(event, input, t) {
 		var reader = new FileReader();
 		var map;
 		reader.onerror = loadErrorHandler;
-		reader.onload = function(e){
+		reader.onload = function (e) {
 			map = JSON.parse(reader.result).map;
 			resetMap(map, t, loadMap);
 		};
 		reader.readAsText(event.target.files[0]);
 	};
 
-	function loadErrorHandler(event){
-		switch(event.target.error.code){
+	function loadErrorHandler(event) {
+		switch (event.target.error.code) {
 			case event.target.error.NOT_FOUND_ERR: {
 				alert("File not found!");
 				break;
@@ -71,35 +76,35 @@
 		};
 	};
 
-	MapContainer.prototype.saveMapPNG = function(){
-		if (window.File && window.FileReader && window.Blob){
+	MapContainer.prototype.saveMapPNG = function () {
+		if (window.File && window.FileReader && window.Blob) {
 			var bounds = this.getBounds();
 			this.cache(bounds.x, bounds.y, bounds.width, bounds.height);
-			this.cacheCanvas.toBlob(function(blob){savefile(blob, "map.png")});
+			this.cacheCanvas.toBlob(function (blob) { savefile(blob, "map.png") });
 			this.uncache();
 		} else {
 			alert("Your browser does not support the necessary File API");
 		};
 	};
 
-	MapContainer.prototype.saveMapJSON = function (){
-		if (window.File && window.FileReader && window.Blob){
+	MapContainer.prototype.saveMapJSON = function () {
+		if (window.File && window.FileReader && window.Blob) {
 			var map = [];
 			var obj;
 			var blob;
 			for (var i = 0; i < this.children.length; i++) {
 				obj = this.children[i];
-				map.push({id:obj.name, x:obj.x, y:obj.y, q:obj.q, r:obj.r, panel:obj.parentPanel.name, rotation:obj.rotation});
+				map.push({ id: obj.name, x: obj.x, y: obj.y, q: obj.q, r: obj.r, panel: obj.parentPanel.name, rotation: obj.rotation });
 			};
-			map = JSON.stringify({map:map});
-			blob = new Blob([map], {type: "application/vnd+TI3.map+json"});
+			map = JSON.stringify({ map: map });
+			blob = new Blob([map], { type: "application/vnd+TI3.map+json" });
 			savefile(blob, "map.t3m");
 		} else {
 			alert("Your browser does not support the necessary File API");
 		};
 	};
 
-	function savefile(blob, filename){
+	function savefile(blob, filename) {
 		var a = document.createElement('a');
 		var blobUrl = URL.createObjectURL(blob);
 		a.display = "none";
@@ -110,36 +115,36 @@
 		document.body.removeChild(a);
 	};
 
-	MapContainer.prototype.mouseDown = function (event){
-		var offset = {x:this.x - event.stageX, y:this.y - event.stageY};
-		var pressmovelistener = this.on("pressmove", function (evt){
-			this.x = evt.stageX+offset.x;
-			this.y = evt.stageY+offset.y;	
+	MapContainer.prototype.mouseDown = function (event) {
+		var offset = { x: this.x - event.stageX, y: this.y - event.stageY };
+		var pressmovelistener = this.on("pressmove", function (evt) {
+			this.x = evt.stageX + offset.x;
+			this.y = evt.stageY + offset.y;
 		}, this);
-		var pressuplistener = this.on("pressup", function (){
+		var pressuplistener = this.on("pressup", function () {
 			this.off("pressmove", pressmovelistener);
 			this.off("pressup", pressuplistener);
 		}, this);
 	};
 
-	MapContainer.prototype.makeMap = function (){
-		this.maxScaleX = this.maxScaleY = element.height/tileHeight;
-		this.minScaleX = this.minScaleY = element.height/(tileHeight*this.maxZoom);
+	MapContainer.prototype.makeMap = function () {
+		this.maxScaleX = this.maxScaleY = element.height / tileHeight;
+		this.minScaleX = this.minScaleY = element.height / (tileHeight * this.maxZoom);
 		this.scaleX = this.scaleY = this.minScaleX;
-		this.grid = new Grid(tileWidth/2, 0, false, true);
+		this.grid = new Grid(tileWidth / 2, 0, false, true);
 		loadMap(null, this);
 	};
 
-	function loadMap(map, t){
+	function loadMap(map, t) {
 		var tmp;
 		for (var panel in cPanel.panels) {
-			if (cPanel.panels[panel] === cPanel.activePanel){
+			if (cPanel.panels[panel] === cPanel.activePanel) {
 				cPanel.populate(cPanel.panels[panel], true);
 			} else {
 				cPanel.populate(cPanel.panels[panel], false);
 			};
 		};
-		map = map || [{id:"Tile-Mecatol_Rex", x:0, y:0, q:0, r:0, panel:"Planets"}];
+		map = map || [{ id: "Tile-Mecatol_Rex", x: 0, y: 0, q: 0, r: 0, panel: "Planets" }];
 		for (var i = 0; i < map.length; i++) {
 			tmp = cPanel.panels[map[i].panel].getChildByName(map[i].id).clone(true);
 			tmp.parentPanel = cPanel.panels[map[i].panel];
@@ -155,41 +160,41 @@
 			mapObj.r = map[i].r;
 			mapObj.scaleX = mapObj.scaleY = 1;
 			mapObj.rotation = map[i].rotation || 0;
-			t.mapTiles[mapObj.q+"."+mapObj.r] = mapObj;
+			t.mapTiles[mapObj.q + "." + mapObj.r] = mapObj;
 			t.addChild(mapObj);
 			mapObj.cursor = "default";
 		};
 		cPanel.populate(cPanel.activePanel, true);
 	};
 
-	function resetMap(map, t, callback){
+	function resetMap(map, t, callback) {
 		var numChildren = t.children.length;
 		for (var i = 0; i < numChildren; i++) {
 			t.children[0].deleteClick();
 		};
 		cPanel.populate(cPanel.activePanel, true);
-		if (typeof callback === "function"){
+		if (typeof callback === "function") {
 			callback(map, t);
 		};
 	};
 
-	MapContainer.prototype.newMap = function (){
+	MapContainer.prototype.newMap = function () {
 		resetMap(null, this, loadMap);
 	};
 
-	MapContainer.prototype.zoomMap = function (event){
+	MapContainer.prototype.zoomMap = function (event) {
 		var obj;
-		var coords = {x:event.stageX, y:event.stageY};
+		var coords = { x: event.stageX, y: event.stageY };
 		this.globalToLocal(coords.x, coords.y, coords);
-		if (this.hitTest(coords.x, coords.y)){
+		if (this.hitTest(coords.x, coords.y)) {
 			obj = this.getObjectUnderPoint(coords.x, coords.y, 1);
 		} else {
 			obj = this;
 		};
 		var bounds = obj.getBounds();
-		var calcXscale = element.height/bounds.height;
-		var calcYscale = element.width/bounds.width;
-		cMap.scaleX = cMap.scaleY = (calcXscale<calcYscale)	? calcXscale:calcYscale;
+		var calcXscale = element.height / bounds.height;
+		var calcYscale = element.width / bounds.width;
+		cMap.scaleX = cMap.scaleY = (calcXscale < calcYscale) ? calcXscale : calcYscale;
 		var coords = obj.localToGlobal(bounds.x, bounds.y);
 		cMap.x -= coords.x;
 		cMap.y -= coords.y;
@@ -197,7 +202,7 @@
 
 	// "Duck typing" mousewheel function. This container will scale on mousewheel events
 	MapContainer.prototype.mouseWheel = function (event, mousecoords) {
-		var delta = -event.detail*120 || event.wheelDelta;
+		var delta = -event.detail * 120 || event.wheelDelta;
 		var holder = this;
 		var previousRegX = holder.regX;
 		var previousRegY = holder.regY;
