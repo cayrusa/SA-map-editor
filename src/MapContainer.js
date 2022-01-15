@@ -18,14 +18,24 @@
 
 		this.mapTiles = [];
 
+		this.text = new createjs.Text('', "60px Arial", "#FFF");
+		this.addChild(this.text);
+
 		this.addEventListeners();
-		};
+	};
 
 	createjs.extend(MapContainer, createjs.Container);
 
 	MapContainer.prototype.TilesUpdated = function () {
 		const set = Object.keys(this.mapTiles).map(k => this.mapTiles[k].edition)
-		console.log("updating", [...new Set(set)]);
+
+		this.text.y = Math.min(...Object.keys(this.mapTiles).map(k => this.mapTiles[k].y)) -400;
+		this.text.x = Math.min(...Object.keys(this.mapTiles).map(k => this.mapTiles[k].x)) -284;
+
+		console.debug("updating", [...new Set(set)]);
+		console.debug("position", [this.text.x, this.text.y]);
+
+		this.text.text = `Editions needed: ${([...new Set(set)]).sort().join(', ')}`;
 	}
 
 	MapContainer.prototype.addEventListeners = function () {
@@ -165,6 +175,7 @@
 			mapObj.cursor = "default";
 		};
 		cPanel.populate(cPanel.activePanel, true);
+		t.TilesUpdated();
 	};
 
 	function resetMap(map, t, callback) {
