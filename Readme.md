@@ -3,7 +3,7 @@ This is the map editor of Shattered Ascension, which can be used [here](https://
 # Getting startet
 
 If you have Node installed, run 
-- `npm run install`  
+- `npm install`  
   to install all dependencys
 - `npm run build`  
    to generate the `dist` folder that you can deploy to your server
