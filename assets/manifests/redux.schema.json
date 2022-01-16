@@ -117,7 +117,7 @@
 								"influence": {
 									"type": "number"
 								},
-								"science": {
+								"technologyspecialties": {
 									"type": "array",
 									"items": {
 										"type": "string",

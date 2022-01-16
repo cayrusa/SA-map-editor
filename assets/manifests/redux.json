@@ -16,7 +16,7 @@
 					"name": "Fria",
 					"influence": 0,
 					"resources": 2,
-					"science": [
+					"technologyspecialties": [
 						"blue"
 					]
 				}
@@ -31,7 +31,7 @@
 					"name": "Arinam",
 					"influence": 2,
 					"resources": 1,
-					"science": [
+					"technologyspecialties": [
 						"blue"
 					]
 				},
@@ -56,7 +56,7 @@
 					"name": "Lor",
 					"influence": 2,
 					"resources": 1,
-					"science": [
+					"technologyspecialties": [
 						"red"
 					]
 				}
@@ -75,7 +75,7 @@
 					"name": "Bereg",
 					"influence": 1,
 					"resources": 3,
-					"science": [
+					"technologyspecialties": [
 						"red"
 					]
 				},
@@ -83,7 +83,7 @@
 					"name": "Lirta IV",
 					"influence": 3,
 					"resources": 2,
-					"science": [
+					"technologyspecialties": [
 						"green"
 					]
 				}
@@ -103,7 +103,7 @@
 					"name": "Gral",
 					"influence": 1,
 					"resources": 1,
-					"science": [
+					"technologyspecialties": [
 						"blue"
 					]
 				}
@@ -118,7 +118,7 @@
 					"name": "Coorneeq",
 					"influence": 2,
 					"resources": 1,
-					"science": [
+					"technologyspecialties": [
 						"red"
 					]
 				},
@@ -137,7 +137,7 @@
 					"name": "Dal Bootha",
 					"resources": 0,
 					"influence": 2,
-					"science": [
+					"technologyspecialties": [
 						"red"
 					]
 				},
@@ -145,7 +145,7 @@
 					"name": "Xxehan",
 					"influence": 1,
 					"resources": 1,
-					"science": [
+					"technologyspecialties": [
 						"green"
 					]
 				}
@@ -436,7 +436,7 @@
 					"name": "Lodor",
 					"influence": 1,
 					"resources": 3,
-					"science": [
+					"technologyspecialties": [
 						"green"
 					]
 				}
@@ -463,7 +463,7 @@
 					"name": "Mehar Xull",
 					"influence": 3,
 					"resources": 1,
-					"science": [
+					"technologyspecialties": [
 						"blue"
 					]
 				}
@@ -483,7 +483,7 @@
 					"name": "Zohbat",
 					"influence": 1,
 					"resources": 3,
-					"science": [
+					"technologyspecialties": [
 						"blue"
 					]
 				}
@@ -502,7 +502,7 @@
 					"name": "New Albion",
 					"influence": 1,
 					"resources": 1,
-					"science": [
+					"technologyspecialties": [
 						"green"
 					]
 				},
@@ -525,7 +525,7 @@
 					"name": "Quann",
 					"influence": 1,
 					"resources": 2,
-					"science": [
+					"technologyspecialties": [
 						"green"
 					]
 				}
@@ -545,7 +545,7 @@
 					"name": "Rarron",
 					"influence": 3,
 					"resources": 0,
-					"science": [
+					"technologyspecialties": [
 						"green"
 					]
 				}
@@ -588,7 +588,7 @@
 					"name": "Tequran",
 					"influence": 0,
 					"resources": 2,
-					"science": [
+					"technologyspecialties": [
 						"red"
 					]
 				},
@@ -596,7 +596,7 @@
 					"name": "Torkan",
 					"influence": 3,
 					"resources": 0,
-					"science": [
+					"technologyspecialties": [
 						"blue"
 					]
 				}
@@ -623,7 +623,7 @@
 					"name": "Vefut II",
 					"influence": 0,
 					"resources": 2,
-					"science": [
+					"technologyspecialties": [
 						"red"
 					]
 				}
@@ -672,7 +672,7 @@
 					"name": "Abaddon",
 					"influence": 0,
 					"resources": 1,
-					"science": [
+					"technologyspecialties": [
 						"red"
 					]
 				}
@@ -699,7 +699,7 @@
 					"name": "El'nath",
 					"resources": 2,
 					"influence": 0,
-					"science": [
+					"technologyspecialties": [
 						"blue"
 					]
 				}
@@ -714,7 +714,7 @@
 					"name": "Garbozia",
 					"influence": 1,
 					"resources": 2,
-					"science": [
+					"technologyspecialties": [
 						"green"
 					]
 				}
@@ -775,7 +775,7 @@
 					"name": "Winnu",
 					"influence": 4,
 					"resources": 3,
-					"science": [
+					"technologyspecialties": [
 						"yellow"
 					]
 				}
@@ -806,7 +806,7 @@
 					"name": "Lesab",
 					"influence": 1,
 					"resources": 2,
-					"science": [
+					"technologyspecialties": [
 						"green"
 					]
 				}
@@ -826,7 +826,7 @@
 					"name": "Velnor",
 					"influence": 0,
 					"resources": 2,
-					"science": [
+					"technologyspecialties": [
 						"red"
 					]
 				}
@@ -903,7 +903,7 @@
 					"name": "Rigel I",
 					"influence": 1,
 					"resources": 0,
-					"science": [
+					"technologyspecialties": [
 						"green"
 					]
 				},
@@ -916,7 +916,7 @@
 					"name": "Rigel III",
 					"influence": 1,
 					"resources": 1,
-					"science": [
+					"technologyspecialties": [
 						"blue"
 					]
 				}
@@ -965,7 +965,7 @@
 					"name": "Bellatrix",
 					"resources": 0,
 					"influence": 1,
-					"science": [
+					"technologyspecialties": [
 						"red"
 					]
 				}
@@ -980,7 +980,7 @@
 					"name": "Vega Minor",
 					"influence": 2,
 					"resources": 1,
-					"science": [
+					"technologyspecialties": [
 						"blue"
 					]
 				},
