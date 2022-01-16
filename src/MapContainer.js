@@ -18,8 +18,6 @@
 
 		this.mapTiles = [];
 
-		this.text = new createjs.Text('', "60px Arial", "#FFF");
-		this.addChild(this.text);
 
 		this.addEventListeners();
 	};
@@ -29,13 +27,26 @@
 	MapContainer.prototype.TilesUpdated = function () {
 		const set = Object.keys(this.mapTiles).map(k => this.mapTiles[k].edition)
 
-		this.text.y = Math.min(...Object.keys(this.mapTiles).map(k => this.mapTiles[k].y)) -400;
-		this.text.x = Math.min(...Object.keys(this.mapTiles).map(k => this.mapTiles[k].x)) -284;
+
+		const newTilesets = ([...new Set(set)]).sort();
 
 		console.debug("updating", [...new Set(set)]);
-		console.debug("position", [this.text.x, this.text.y]);
 
-		this.text.text = `Editions needed: ${([...new Set(set)]).sort().join(', ')}`;
+		const tilesetList = document.getElementById('tileset-list');
+		if (tilesetList) {
+			tilesetList.innerHTML = '';
+			const listElements = newTilesets.map(x => {
+				const li = document.createElement('li');
+				li.innerText = x;
+				return li;
+			});
+			for (const li of listElements) {
+				tilesetList.appendChild(li);
+			}
+			const legend = document.getElementsByTagName('legend')[0];
+			legend.style.display = newTilesets.length == 0 ? 'none' : 'block'
+		}
+
 	}
 
 	MapContainer.prototype.addEventListeners = function () {
