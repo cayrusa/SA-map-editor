@@ -55,7 +55,7 @@ await extract('./tmp/assets.zip', { dir: path.join(__dirname, '..', 'dist', 'ass
 console.log('assets extracted')
 
 console.log('minifiying...')
-const minified = minify(libFiles.concat(srcFiles))
+const minified = minify({ ...libFiles, ...srcFiles }, { sourceMap: { url: 'TI3SA.min.js.map', includeSources: true, names: true, root: 'src' } })
 
 if (minified.warnings)
     console.warn(minified.warnings)
@@ -70,8 +70,16 @@ console.log("minified")
 
 async function readFiles(p) {
     const lib = await fs.readdir(p);
-    const libFiles = (await Promise.all(lib.map((x, i) => fs.readFile(path.join(p, x))))).map(x => x.toString());
-    return libFiles;
+
+    const libFiles = (await Promise.all(lib.map(async (x) => {
+        const stream = await fs.readFile(path.join(p, x));
+        const txt = stream.toString();
+        return [x, txt];
+    })));
+    return libFiles.reduce((obj, v) => {
+        obj[v[0]] = v[1]
+        return obj;
+    }, {});
 }
 
 console.log('copy local assets');
