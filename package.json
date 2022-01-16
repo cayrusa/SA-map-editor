@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "description": "A tool to generate Twilight Imperium Maps for Shattered Ascension",
   "private": true,
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
     "build": "node scripts/pack.mjs",
     "dev": "serve dist",
@@ -30,17 +27,10 @@
     "url": "https://github.com/cayrusa/SA-map-editor/issues"
   },
   "homepage": "https://github.com/cayrusa/SA-map-editor#readme",
-  "dependencies": {
-    "createjs": "^1.0.1",
-    "easeljs": "^1.0.2",
-    "jquery": "2.1.0",
-    "preloadjs": "^1.0.1",
-    "tweenjs": "^1.0.2",
-    "uglify-js": "^3.14.5"
-  },
   "devDependencies": {
     "@types/createjs": "^0.0.29",
     "extract-zip": "^2.0.1",
+    "uglify-js": "^3.14.5",
     "serve": "^13.0.2"
   }
 }
