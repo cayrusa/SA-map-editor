@@ -1,4 +1,5 @@
 {
+	"$schema": "redux.schema.json",
 	"path": "assets/tiles/Redux/",
 	"manifest": [
 		{
@@ -7,34 +8,57 @@
 			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Abyz"
+					"name": "Abyz",
+					"influence": 0,
+					"resources": 3
 				},
 				{
-					"name": "Fria"
+					"name": "Fria",
+					"influence": 0,
+					"resources": 2,
+					"science": [
+						"blue"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Arinam-Meer",
 			"src": "ArinamMeer.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Arinam"
+					"name": "Arinam",
+					"influence": 2,
+					"resources": 1,
+					"science": [
+						"blue"
+					]
 				},
 				{
-					"name": "Meer"
+					"name": "Meer",
+					"influence": 4,
+					"resources": 0
 				}
 			]
 		},
 		{
 			"id": "Tile-Arnor-Lor",
 			"src": "ArnorLor.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Arnor"
+					"name": "Arnor",
+					"influence": 1,
+					"resources": 2
 				},
 				{
-					"name": "Lor"
+					"name": "Lor",
+					"influence": 2,
+					"resources": 1,
+					"science": [
+						"red"
+					]
 				}
 			]
 		},
@@ -45,36 +69,63 @@
 		{
 			"id": "Tile-Bereg-Lirta_IV",
 			"src": "BeregLirtaIV.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Bereg"
+					"name": "Bereg",
+					"influence": 1,
+					"resources": 3,
+					"science": [
+						"red"
+					]
 				},
 				{
-					"name": "Lirta_IV"
+					"name": "Lirta IV",
+					"influence": 3,
+					"resources": 2,
+					"science": [
+						"green"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Centauri-Gral",
 			"src": "CentauriGral.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Centauri"
+					"name": "Centauri",
+					"influence": 3,
+					"resources": 1
 				},
 				{
-					"name": "Gral"
+					"name": "Gral",
+					"influence": 1,
+					"resources": 1,
+					"science": [
+						"blue"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Coorneeq-Resculon",
 			"src": "CorneeqResculon.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Coorneeq"
+					"name": "Coorneeq",
+					"influence": 2,
+					"resources": 1,
+					"science": [
+						"red"
+					]
 				},
 				{
-					"name": "Resculon"
+					"name": "Resculon",
+					"resources": 2,
+					"influence": 0
 				}
 			]
 		},
@@ -83,10 +134,20 @@
 			"src": "DalBoothaXxehan.png",
 			"planets": [
 				{
-					"name": "Dal_Bootha"
+					"name": "Dal Bootha",
+					"resources": 0,
+					"influence": 2,
+					"science": [
+						"red"
+					]
 				},
 				{
-					"name": "Xxehan"
+					"name": "Xxehan",
+					"influence": 1,
+					"resources": 1,
+					"science": [
+						"green"
+					]
 				}
 			]
 		},
@@ -181,141 +242,242 @@
 		{
 			"id": "Tile-HS_z_Hacan",
 			"src": "HS-Hacan.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "HS_Hacan"
+					"name": "Arretze",
+					"influence": 0,
+					"resources": 2
+				},
+				{
+					"name": "Hercant",
+					"influence": 1,
+					"resources": 1
+				},
+				{
+					"name": "Kamdorn",
+					"influence": 1,
+					"resources": 0
 				}
 			]
 		},
 		{
 			"id": "Tile-HS_z_Jolnar",
 			"src": "HS-JolNar.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "HS_Jolnar"
+					"name": "Nar",
+					"influence": 3,
+					"resources": 2
+				},
+				{
+					"name": "Jol",
+					"influence": 2,
+					"resources": 1
 				}
 			]
 		},
 		{
 			"id": "Tile-HS_z_L1z1x",
 			"src": "HS-Lizix.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "HS_L1z1x"
+					"name": "[0.0.0]",
+					"resources": 5,
+					"influence": 0
 				}
 			]
 		},
 		{
 			"id": "Tile-HS_z_Letnev",
 			"src": "HS-Letnev.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "HS_Letnev"
+					"name": "Arc Prime",
+					"resources": 4,
+					"influence": 0
+				},
+				{
+					"name": "Wren Terra",
+					"influence": 1,
+					"resources": 2
 				}
 			]
 		},
 		{
 			"id": "Tile-HS_z_Mentak",
 			"src": "HS-Mentak.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "HS_Mentak"
+					"name": "Moll Primus",
+					"resources": 4,
+					"influence": 1
 				}
 			]
 		},
 		{
 			"id": "Tile-HS_z_Naalu",
 			"src": "HS-Naalu.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "HS_Naalu"
+					"name": "Maaluuk",
+					"influence": 2,
+					"resources": 0
+				},
+				{
+					"name": "Druaa",
+					"influence": 1,
+					"resources": 3
 				}
 			]
 		},
 		{
 			"id": "Tile-HS_z_Norr",
 			"src": "HS-Norr.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "HS_Norr"
+					"name": "Tren'lak",
+					"influence": 0,
+					"resources": 1
+				},
+				{
+					"influence": 1,
+					"resources": 3,
+					"name": "Quinarra"
 				}
 			]
 		},
 		{
 			"id": "Tile-HS_z_Sol",
 			"src": "HS-Sol.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "HS_Sol"
+					"name": "Jord",
+					"influence": 2,
+					"resources": 4
 				}
 			]
 		},
 		{
 			"id": "Tile-HS_z_Xxcha",
 			"src": "HS-Xxcha.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "HS_Xxcha"
+					"name": "Archon Ren",
+					"influence": 3,
+					"resources": 2
+				},
+				{
+					"name": "Archon Tau",
+					"influence": 1,
+					"resources": 1
 				}
 			]
 		},
 		{
 			"id": "Tile-HS_z_Yssaril",
 			"src": "HS-Yssaril.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "HS_Yssaril"
+					"name": "Retillion",
+					"influence": 3,
+					"resources": 2
+				},
+				{
+					"name": "Shalloq",
+					"influence": 2,
+					"resources": 1
 				}
 			]
 		},
 		{
 			"id": "Tile-Lazar-Sakulag",
 			"src": "LazarSakulag.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Lazar"
+					"name": "Lazar",
+					"influence": 0,
+					"resources": 1
 				},
 				{
-					"name": "Sakulag"
+					"name": "Sakulag",
+					"influence": 1,
+					"resources": 2
 				}
 			]
 		},
 		{
 			"id": "Tile-Lodor",
+			"edition": "TI3",
+			"wormholes": [
+				"alpha"
+			],
 			"src": "Lodor.png",
 			"planets": [
 				{
-					"name": "Lodor"
+					"name": "Lodor",
+					"influence": 1,
+					"resources": 3,
+					"science": [
+						"green"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Mecatol_Rex",
 			"src": "Mecatol.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Mecatol_Rex"
+					"name": "Mecatol Rex",
+					"influence": 6,
+					"resources": 1
 				}
 			]
 		},
 		{
 			"id": "Tile-Mehar_Xull",
 			"src": "MeharXull.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Mehar_Xull"
+					"name": "Mehar Xull",
+					"influence": 3,
+					"resources": 1,
+					"science": [
+						"blue"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Mellon-Zohbat",
 			"src": "MellonZohbat.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Mellon"
+					"name": "Mellon",
+					"influence": 2,
+					"resources": 0
 				},
 				{
-					"name": "Zohbat"
+					"name": "Zohbat",
+					"influence": 1,
+					"resources": 3,
+					"science": [
+						"blue"
+					]
 				}
 			]
 		},
@@ -326,42 +488,70 @@
 		{
 			"id": "Tile-New_Albion-Starpoint",
 			"src": "StarpointNewAlbion.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "New_Albion"
+					"name": "New Albion",
+					"influence": 1,
+					"resources": 1,
+					"science": [
+						"green"
+					]
 				},
 				{
-					"name": "Starpoint"
+					"name": "Starpoint",
+					"resources": 3,
+					"influence": 1
 				}
 			]
 		},
 		{
 			"id": "Tile-Quann",
 			"src": "Quann.png",
+			"edition": "TI3",
+			"wormholes": [
+				"beta"
+			],
 			"planets": [
 				{
-					"name": "Quann"
+					"name": "Quann",
+					"influence": 1,
+					"resources": 2,
+					"science": [
+						"green"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Qucenn-Rarron",
 			"src": "QucennRarron.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Qucenn"
+					"name": "Qucenn",
+					"influence": 2,
+					"resources": 1
 				},
 				{
-					"name": "Rarron"
+					"name": "Rarron",
+					"influence": 3,
+					"resources": 0,
+					"science": [
+						"green"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Saudor",
 			"src": "Saudor.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Saudor"
+					"name": "Saudor",
+					"influence": 2,
+					"resources": 2
 				}
 			]
 		},
@@ -372,48 +562,74 @@
 		{
 			"id": "Tile-Tarmann",
 			"src": "Tarmann.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Tarmann"
+					"name": "Tar'mann",
+					"influence": 1,
+					"resources": 1
 				}
 			]
 		},
 		{
 			"id": "Tile-Tequran-Torkan",
 			"src": "TequranTorkan.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Tequran"
+					"name": "Tequran",
+					"influence": 0,
+					"resources": 2,
+					"science": [
+						"red"
+					]
 				},
 				{
-					"name": "Torkan"
+					"name": "Torkan",
+					"influence": 3,
+					"resources": 0,
+					"science": [
+						"blue"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Thibah",
 			"src": "Thibah.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Thibah"
+					"name": "Thibah",
+					"influence": 1,
+					"resources": 1
 				}
 			]
 		},
 		{
 			"id": "Tile-Vefut_II",
 			"src": "VefutII.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Vefut_II"
+					"name": "Vefut II",
+					"influence": 0,
+					"resources": 2,
+					"science": [
+						"red"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Wellon",
 			"src": "Wellon.png",
+			"edition": "TI3",
 			"planets": [
 				{
-					"name": "Wellon"
+					"name": "Wellon",
+					"influence": 2,
+					"resources": 1
 				}
 			]
 		},
@@ -432,87 +648,140 @@
 		{
 			"id": "Tile-Ashtroth-Loki-Abaddon",
 			"src": "AshtrothLokiAbaddon.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "Ashtroth"
+					"name": "Ashtroth",
+					"influence": 0,
+					"resources": 2
 				},
 				{
-					"name": "Loki"
+					"name": "Loki",
+					"influence": 2,
+					"resources": 1
 				},
 				{
-					"name": "Abaddon"
+					"name": "Abaddon",
+					"influence": 0,
+					"resources": 1,
+					"science": [
+						"red"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Capha",
 			"src": "Capha.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "Capha"
+					"name": "Capha",
+					"resources": 3,
+					"influence": 0
 				}
 			]
 		},
 		{
 			"id": "Tile-Elnath",
 			"src": "Elnath.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "Elnath"
+					"name": "El'nath",
+					"resources": 2,
+					"influence": 0,
+					"science": [
+						"blue"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Garbozia",
 			"src": "Garbozia.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "Garbozia"
+					"name": "Garbozia",
+					"influence": 1,
+					"resources": 2,
+					"science": [
+						"green"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Hopes_End",
 			"src": "HopesEnd.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "Hopes_End"
+					"name": "Hope's End",
+					"influence": 0,
+					"resources": 3,
+					"refresh": [
+						{
+							"type": "shocktroop"
+						}
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-HS_z_Muaat",
 			"src": "HS-Muaat.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "HS_Muaat"
+					"name": "Muaat",
+					"influence": 1,
+					"resources": 4
 				}
 			]
 		},
 		{
 			"id": "Tile-HS_z_Saar",
 			"src": "HS-Saar.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "HS_Saar"
+					"name": "Lisis II",
+					"resources": 1,
+					"influence": 0
+				},
+				{
+					"name": "Ragh",
+					"influence": 1,
+					"resources": 2
 				}
 			]
 		},
 		{
 			"id": "Tile-HS_z_Winnu",
 			"src": "HS-Winnu.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "HS_Winnu"
+					"name": "Winnu",
+					"influence": 4,
+					"resources": 3,
+					"science": [
+						"yellow"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-HS_z_Yin",
 			"src": "HS-Yin.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "HS_Yin"
+					"name": "Darien",
+					"influence": 4,
+					"resources": 2
 				}
 			]
 		},
@@ -523,30 +792,52 @@
 		{
 			"id": "Tile-Lesab",
 			"src": "Lesab.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "Lesab"
+					"name": "Lesab",
+					"influence": 1,
+					"resources": 2,
+					"science": [
+						"green"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Lisis-Velnor",
 			"src": "LisisVelnor.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "Lisis"
+					"name": "Lisis",
+					"influence": 2,
+					"resources": 2
 				},
 				{
-					"name": "Velnor"
+					"name": "Velnor",
+					"influence": 0,
+					"resources": 2,
+					"science": [
+						"red"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Mirage",
 			"src": "Mirage.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "Mirage"
+					"name": "Mirage",
+					"influence": 2,
+					"resources": 1,
+					"refresh": [
+						{
+							"type": "fighter"
+						}
+					]
 				}
 			]
 		},
@@ -555,76 +846,140 @@
 			"src": "Nexus.png",
 			"planets": [
 				{
-					"name": "Nexus"
+					"name": "Mallice",
+					"influence": 0,
+					"resources": 3
 				}
+			],
+			"edition": "TI3:SE",
+			"wormholes": [
+				"alpha",
+				"beta"
 			]
 		},
 		{
 			"id": "Tile-Perimeter",
+			"edition": "TI3:SE",
 			"src": "Perimeter.png",
 			"planets": [
 				{
-					"name": "Perimeter"
+					"name": "Perimeter",
+					"influence": 2,
+					"resources": 2
 				}
 			]
 		},
 		{
 			"id": "Tile-Primor",
 			"src": "Primor.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "Primor"
+					"name": "Primor",
+					"influence": 1,
+					"resources": 2,
+					"refresh": [
+						{
+							"type": "groundforce"
+						}
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Rigel",
 			"src": "Rigel.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "Rigel_I"
+					"name": "Rigel I",
+					"influence": 1,
+					"resources": 0,
+					"science": [
+						"green"
+					]
 				},
 				{
-					"name": "Rigel_II"
+					"name": "Rigel II",
+					"influence": 2,
+					"resources": 1
 				},
 				{
-					"name": "Rigel_III"
+					"name": "Rigel III",
+					"influence": 1,
+					"resources": 1,
+					"science": [
+						"blue"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Sumerian-Arcturus",
 			"src": "SumerianArcturus.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "Sumerian"
+					"name": "Sumerian",
+					"influence": 2,
+					"resources": 2,
+					"refresh": [
+						{
+							"type": "tradegood"
+						}
+					],
+					"type": "spacestation"
 				},
 				{
-					"name": "Arcturus"
+					"name": "Arcturus",
+					"influence": 1,
+					"resources": 1
 				}
 			]
 		},
 		{
 			"id": "Tile-Tsion-Bellatrix",
 			"src": "TsionBellatrix.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "Tsion"
+					"name": "Tsion",
+					"type": "spacestation",
+					"influence": 2,
+					"resources": 2,
+					"refresh": [
+						{
+							"type": "tradegood"
+						}
+					]
 				},
 				{
-					"name": "Bellatrix"
+					"name": "Bellatrix",
+					"resources": 0,
+					"influence": 1,
+					"science": [
+						"red"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Vega",
 			"src": "Vega.png",
+			"edition": "TI3:SE",
 			"planets": [
 				{
-					"name": "Vega_Minor"
+					"name": "Vega Minor",
+					"influence": 2,
+					"resources": 1,
+					"science": [
+						"blue"
+					]
 				},
 				{
-					"name": "Vega_Major"
+					"name": "Vega Major",
+					"influence": 1,
+					"resources": 2
 				}
 			]
 		},
