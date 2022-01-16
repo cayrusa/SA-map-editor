@@ -1,7 +1,7 @@
 {
   "name": "sa-map-editor",
   "version": "0.1.0",
-  "description": "A tool to generate Twilight Imperium Maps for Shatterd Ascension",
+  "description": "A tool to generate Twilight Imperium Maps for Shattered Ascension",
   "private": true,
   "directories": {
     "lib": "lib"
