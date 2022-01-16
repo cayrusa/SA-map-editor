@@ -44,7 +44,9 @@
 				tilesetList.appendChild(li);
 			}
 			const legend = document.getElementsByTagName('legend')[0];
-			legend.style.display = newTilesets.length == 0 ? 'none' : 'block'
+			if (legend) {
+				legend.style.display = newTilesets.length == 0 ? 'none' : 'block'
+			}
 		}
 
 	}
