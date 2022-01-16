@@ -170,6 +170,7 @@
 		{
 			"id": "Tile-HS_I",
 			"src": "HS-I.png",
+			"edition": "TI3",
 			"planets": [
 				{
 					"name": "HS_I"
@@ -179,6 +180,7 @@
 		{
 			"id": "Tile-HS_II",
 			"src": "HS-II.png",
+			"edition": "TI3",
 			"planets": [
 				{
 					"name": "HS_II"
@@ -188,6 +190,7 @@
 		{
 			"id": "Tile-HS_III",
 			"src": "HS-III.png",
+			"edition": "TI3",
 			"planets": [
 				{
 					"name": "HS_III"
@@ -197,6 +200,7 @@
 		{
 			"id": "Tile-HS_IV",
 			"src": "HS-IV.png",
+			"edition": "TI3",
 			"planets": [
 				{
 					"name": "HS_IV"
@@ -206,6 +210,7 @@
 		{
 			"id": "Tile-HS_V",
 			"src": "HS-V.png",
+			"edition": "TI3",
 			"planets": [
 				{
 					"name": "HS_V"
@@ -215,6 +220,7 @@
 		{
 			"id": "Tile-HS_VI",
 			"src": "HS-VI.png",
+			"edition": "TI3",
 			"planets": [
 				{
 					"name": "HS_VI"
@@ -224,6 +230,7 @@
 		{
 			"id": "Tile-HS_VII",
 			"src": "HS-VII.png",
+			"edition": "TI3",
 			"planets": [
 				{
 					"name": "HS_VII"
@@ -233,6 +240,7 @@
 		{
 			"id": "Tile-HS_VIII",
 			"src": "HS-VIII.png",
+			"edition": "TI3",
 			"planets": [
 				{
 					"name": "HS_VIII"
