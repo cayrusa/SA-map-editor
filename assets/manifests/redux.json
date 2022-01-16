@@ -64,7 +64,8 @@
 		},
 		{
 			"id": "Tile-Asteroid_Field",
-			"src": "Special_AsteroidField.png"
+			"src": "Special_AsteroidField.png",
+			"edition": "TI3"
 		},
 		{
 			"id": "Tile-Bereg-Lirta_IV",
@@ -153,19 +154,23 @@
 		},
 		{
 			"id": "Tile-Empty1",
-			"src": "Empty1.png"
+			"src": "Empty1.png",
+			"edition": "TI3"
 		},
 		{
 			"id": "Tile-Empty2",
-			"src": "Empty2.png"
+			"src": "Empty2.png",
+			"edition": "TI3"
 		},
 		{
 			"id": "Tile-Empty3",
-			"src": "Empty3.png"
+			"src": "Empty3.png",
+			"edition": "TI3"
 		},
 		{
 			"id": "Tile-Empty4",
-			"src": "Empty4.png"
+			"src": "Empty4.png",
+			"edition": "TI3"
 		},
 		{
 			"id": "Tile-HS_I",
@@ -491,7 +496,8 @@
 		},
 		{
 			"id": "Tile-Nebula",
-			"src": "Special_Nebula.png"
+			"src": "Special_Nebula.png",
+			"edition": "TI3"
 		},
 		{
 			"id": "Tile-New_Albion-Starpoint",
@@ -565,7 +571,8 @@
 		},
 		{
 			"id": "Tile-Supernova",
-			"src": "Special_Supernova.png"
+			"src": "Special_Supernova.png",
+			"edition": "TI3"
 		},
 		{
 			"id": "Tile-Tarmann",
@@ -643,15 +650,18 @@
 		},
 		{
 			"id": "Tile-Wormhole_A",
-			"src": "Wormhole_A.png"
+			"src": "Wormhole_A.png",
+			"edition": "TI3"
 		},
 		{
 			"id": "Tile-Wormhole_B",
-			"src": "Wormhole_B.png"
+			"src": "Wormhole_B.png",
+			"edition": "TI3"
 		},
 		{
 			"id": "Tile-Wormhole_C",
-			"src": "Wormhole_C.png"
+			"src": "Wormhole_C.png",
+			"edition": "TI3:SE"
 		},
 		{
 			"id": "Tile-Ashtroth-Loki-Abaddon",
@@ -795,7 +805,8 @@
 		},
 		{
 			"id": "Tile-Ion_Storm",
-			"src": "Special_IonStorm.png"
+			"src": "Special_IonStorm.png",
+			"edition": "TI3:SE"
 		},
 		{
 			"id": "Tile-Lesab",
@@ -994,196 +1005,361 @@
 		{
 			"id": "Tile-Cormund",
 			"src": "Cormund.png",
+			"edition": "TI3:SotT",
 			"planets": [
 				{
-					"name": "Cormund"
+					"name": "Cormund",
+					"influence": 0,
+					"resources": 2
 				}
 			]
 		},
 		{
 			"id": "Tile-Everra",
 			"src": "Special_Everra.png",
+			"edition": "TI3:SotT",
 			"planets": [
 				{
-					"name": "Everra"
+					"name": "Everra",
+					"influence": 1,
+					"resources": 3
 				}
 			]
 		},
 		{
 			"id": "Tile-Faunus",
 			"src": "Faunus.png",
+			"edition": "TI3:SotT",
 			"planets": [
 				{
-					"name": "Faunus"
+					"name": "Faunus",
+					"influence": 3,
+					"resources": 1,
+					"technologyspecialties": [
+						"green",
+						"green"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Gravity_rift",
-			"src": "Special_GravityRift.png"
+			"src": "Special_GravityRift.png",
+			"edition": "TI3:SotT"
 		},
 		{
 			"id": "Tile-Hercalor-Tiamat",
 			"src": "HercalorTiamat.png",
+			"edition": "TI3:SotT",
 			"planets": [
 				{
-					"name": "Hercalor"
+					"name": "Hercalor",
+					"influence": 0,
+					"resources": 1,
+					"technologyspecialties": [
+						"yellow"
+					]
 				},
 				{
-					"name": "Tiamat"
+					"name": "Tiamat",
+					"influence": 2,
+					"resources": 1,
+					"technologyspecialties": [
+						"yellow"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-HS_z_Arborec",
 			"src": "HS-Arborec.png",
+			"edition": "TI3:SotT",
 			"planets": [
 				{
-					"name": "HS_Arborec"
+					"name": "Nestphar",
+					"influence": 2,
+					"resources": 3,
+					"technologyspecialties": [
+						"green"
+					]
+
 				}
 			]
 		},
 		{
 			"id": "Tile-HS_z_Creuss",
 			"src": "HS-Creuss.png",
+			"edition": "TI3:SotT",
 			"planets": [
 				{
-					"name": "HS_Creuss"
+					"name": "Creuss",
+					"influence": 2,
+					"resources": 4
 				}
 			]
 		},
 		{
 			"id": "Tile-HS_z_Creuss_Gate",
 			"src": "HS-CreussGate.png",
-			"planets": [
-				{
-					"name": "HS_Creuss_Gate"
-				}
-			]
+			"edition": "TI3:SotT"
 		},
 		{
 			"id": "Tile-HS_z_Virus",
 			"src": "HS-Virus.png",
+			"edition": "TI3:SotT",
 			"planets": [
 				{
-					"name": "HS_Virus"
+					"name": "MordaiII",
+					"influence": 0,
+					"resources": 4
 				}
 			]
 		},
 		{
 			"id": "Tile-Industrex",
 			"src": "Industrex.png",
+			"edition": "TI3:SotT",
 			"planets": [
 				{
-					"name": "Industrex"
+					"name": "Industrex",
+					"influence": 0,
+					"resources": 2,
+					"technologyspecialties": [
+						"red",
+						"red"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Sem-Lore",
 			"src": "Semlore.png",
+			"edition": "TI3:SotT",
 			"planets": [
 				{
-					"name": "Sem-Lore"
+					"name": "Sem-Lore",
+					"influence": 2,
+					"resources": 3,
+					"technologyspecialties": [
+						"yellow"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Tempesta",
 			"src": "Tempesta.png",
+			"edition": "TI3:SotT",
 			"planets": [
 				{
-					"name": "Tempesta"
+					"name": "Tempesta",
+					"influence": 1,
+					"resources": 1,
+					"technologyspecialties": [
+						"blue",
+						"blue"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Vadrila",
 			"src": "Vadrila.png",
+			"edition": "SA",
 			"planets": [
 				{
-					"name": "Vadrila"
+					"name": "Vadrila",
+					"influence": 1,
+					"resources": 1,
+					"technologyspecialties": [
+						"blue",
+						"red"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Valhaut",
 			"src": "Valhaut.png",
+			"edition": "SA",
 			"planets": [
 				{
-					"name": "Valhaut"
+					"name": "Valhaut",
+					"influence": 0,
+					"resources": 1,
+					"refresh": [
+						{
+							"type": "spacemine"
+						}
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Arkath",
 			"src": "Arkath.png",
+			"edition": "SA",
 			"planets": [
 				{
-					"name": "Arkath"
+					"name": "Arkath",
+					"influence": 2,
+					"resources": 0,
+					"refresh": [
+						{
+							"type": "naturalwealth"
+						}
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Danaan",
 			"src": "Danaan.png",
+			"edition": "SA",
 			"planets": [
 				{
-					"name": "Danaan"
+					"name": "Danaan",
+					"influence": 2,
+					"resources": 1,
+					"technologyspecialties": [
+						"yellow",
+						"green"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Icarus-Anchorpoint",
 			"src": "Icarus-Anchorpoint.png",
+			"edition": "SA",
 			"planets": [
 				{
-					"name": "Icarus-Anchorpoint"
+					"name": "Icarus",
+					"influence": 3,
+					"resources": 1,
+					"refresh": [
+						{
+							"type": "tradegood"
+						}
+					]
+				},
+				{
+					"name": "Anchorpoint",
+					"influence": 0,
+					"resources": 0,
+					"technologyspecialties": [
+						"yellow"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Sehras-Beli",
 			"src": "Sehras-Beli.png",
+			"edition": "SA",
 			"planets": [
 				{
-					"name": "Sehras-Beli"
+					"name": "Sehras",
+					"influence": 0,
+					"resources": 2,
+					"refresh": [
+						{
+							"type": "naturalwealth"
+						}
+					]
+				},
+				{
+					"name": "Beli",
+					"influence": 2,
+					"resources": 0,
+					"technologyspecialties": [
+						"yellow"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Tiberion",
 			"src": "Tiberion.png",
+			"edition": "SA",
 			"planets": [
 				{
-					"name": "Tiberion"
+					"name": "Tiberion",
+					"influence": 2,
+					"resources": 2,
+					"refresh": [
+						{
+							"type": "tradegood"
+						}
+					],
+					"technologyspecialties": [
+						"yellow"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Sassanos",
 			"src": "Sassanos.png",
+			"edition": "SA",
 			"planets": [
 				{
-					"name": "Sassanos"
+					"name": "Sassanos",
+					"influence": 1,
+					"resources": 1,
+					"refresh": [
+						{
+							"type": "groundforce"
+						},
+						{
+							"type": "fighter"
+						}
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Sanctuary-AurumVI",
 			"src": "Sanctuary-AurumVI.png",
+			"edition": "SA",
 			"planets": [
 				{
-					"name": "Sanctuary-AurumVI"
+					"name": "Sanctuary",
+					"influence": 2,
+					"resources": 0,
+					"refresh": [
+						{
+							"type": "actioncard"
+						},
+						{
+							"type": "politicalcard"
+						}
+					]
+				},
+				{
+					"name": "AurumVI",
+					"influence": 1,
+					"resources": 1,
+					"technologyspecialties": [
+						"yellow"
+					]
 				}
 			]
 		},
 		{
 			"id": "Tile-Mekara",
 			"src": "Mekara.png",
+			"edition": "SA",
 			"planets": [
 				{
-					"name": "Mekara"
+					"name": "Mekara",
+					"influence": 1,
+					"resources": 1,
+					"refresh": [
+						{
+							"type": "pds"
+						}
+					]
 				}
 			]
 		},
