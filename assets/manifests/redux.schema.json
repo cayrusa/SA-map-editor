@@ -1,0 +1,165 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://astralvault.net/games/SA/schema/redux.json",
+	"title": "Redux",
+	"type": "object",
+	"required": [
+		"path",
+		"manifest"
+	],
+	"properties": {
+		"path": {
+			"$id": "#root/path",
+			"title": "Path",
+			"type": "string",
+			"default": "",
+			"examples": [
+				"assets/tiles/Redux/"
+			],
+			"pattern": "^.*$"
+		},
+		"manifest": {
+			"$id": "#root/manifest",
+			"title": "Manifest",
+			"type": "array",
+			"default": [],
+			"items": {
+				"$id": "#root/manifest/items",
+				"title": "Items",
+				"type": "object",
+				"required": [
+					"id",
+					"src"
+				],
+				"properties": {
+					"id": {
+						"$id": "#root/manifest/items/id",
+						"title": "Id",
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Tile-Abyz-Fria"
+						],
+						"pattern": "^.*$"
+					},
+					"src": {
+						"$id": "#root/manifest/items/src",
+						"title": "Src",
+						"type": "string",
+						"default": "",
+						"examples": [
+							"AbyzFria.png"
+						],
+						"pattern": "^.*$"
+					},
+					"edition": {
+						"$id": "#root/manifest/items/edition",
+						"title": "Edition",
+						"type": "string",
+						"default": "SA",
+						"examples": [
+							"TI3"
+						],
+						"enum": [
+							"TI3",
+							"TI3:SE",
+							"TI3:SotT",
+							"SA"
+						]
+					},
+					"wormholes": {
+						"type": "array",
+						"items": {
+							"type": "string",
+							"enum": [
+								"alpha",
+								"beta",
+								"gama",
+								"delta"
+							]
+						}
+					},
+					"planets": {
+						"$id": "#root/manifest/items/planets",
+						"title": "Planets",
+						"type": "array",
+						"default": [],
+						"items": {
+							"$id": "#root/manifest/items/planets/items",
+							"title": "Items",
+							"type": "object",
+							"required": [
+								"name"
+							],
+							"properties": {
+								"name": {
+									"$id": "#root/manifest/items/planets/items/name",
+									"title": "Name",
+									"type": "string",
+									"default": "",
+									"examples": [
+										"Abyz"
+									],
+									"pattern": "^.+$"
+								},
+								"type": {
+									"type": "string",
+									"default": "planet",
+									"enum": [
+										"planet",
+										"spacestation"
+									]
+								},
+								"resources": {
+									"type": "number"
+								},
+								"influence": {
+									"type": "number"
+								},
+								"technologyspecialties": {
+									"type": "array",
+									"items": {
+										"type": "string",
+										"enum": [
+											"yellow",
+											"green",
+											"blue",
+											"red"
+										]
+									}
+								},
+								"refresh": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"type": {
+												"type": "string",
+												"enum": [
+													"fighter",
+													"tradegood",
+													"groundforce",
+													"shocktroop",
+													"spacemine",
+													"naturalwealth",
+													"actioncard",
+													"politicalcard",
+													"pds"
+												]
+											},
+											"amount": {
+												"type": "number",
+												"default": 2
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
