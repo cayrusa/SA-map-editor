@@ -117,7 +117,7 @@
 								"influence": {
 									"type": "number"
 								},
-								"science": {
+								"technologyspecialties": {
 									"type": "array",
 									"items": {
 										"type": "string",
@@ -140,7 +140,12 @@
 													"fighter",
 													"tradegood",
 													"groundforce",
-													"shocktroop"
+													"shocktroop",
+													"spacemine",
+													"naturalwealth",
+													"actioncard",
+													"politicalcard",
+													"pds"
 												]
 											},
 											"amount": {
