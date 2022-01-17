@@ -24,6 +24,7 @@
 			this.bounds = this.gfx.getBounds();
 		};
 		this.addChild(this.gfx);
+		this.edition = obj.edition;
 	};
 	createjs.extend(MapObject, createjs.Container);
 
@@ -73,7 +74,6 @@
 		this.q = obj.q;
 		this.r = obj.r;
 		this.clonedFrom = obj.clonedFrom || this;
-		this.edition = obj.edition;
 
 		/*
 		var hexagon = new createjs.Shape();
