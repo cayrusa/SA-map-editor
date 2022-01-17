@@ -102,8 +102,15 @@
 	MapContainer.prototype.saveMapPNG = function () {
 		if (window.File && window.FileReader && window.Blob) {
 			var bounds = this.getBounds();
-			this.cache(bounds.x, bounds.y, bounds.width, bounds.height);
+
+			const padding = tileWidth / 2;
+			const background = new createjs.Shape;
+			background.graphics.f("black").r(bounds.x - padding, bounds.y - padding, bounds.width + 2 * padding, bounds.height + 2 * padding);
+			this.addChildAt(background, 0);
+
+			this.cache(bounds.x - padding, bounds.y - padding, bounds.width + 2 * padding, bounds.height + 2 * padding);
 			this.cacheCanvas.toBlob(function (blob) { savefile(blob, "map.png") });
+			this.removeChild(background);
 			this.uncache();
 		} else {
 			alert("Your browser does not support the necessary File API");
