@@ -93,6 +93,7 @@
 	MapObject.prototype.deleteClick = function (event) {
 		if (this.parent === cMap) {
 			cMap.removeChild(this);
+			cMap.TilesUpdated();
 		};
 	};
 
@@ -110,6 +111,7 @@
 		this.on("pressup", this.handleMouseUp, tmp, true);
 		if (this.parent === cMap) {
 			cMap.removeChild(this);
+			cMap.TilesUpdated();
 			if (this instanceof Tile) {
 				delete cMap.mapTiles[this.q + "." + this.r];
 				tmp.oldX = this.x;
@@ -189,6 +191,7 @@
 				};
 			};
 			cMap.removeChild(this);
+			cMap.TilesUpdated();
 		};
 	};
 
@@ -229,6 +232,8 @@
 						cPanel.addTile(obj.clonedFrom, obj.parentPanel);
 					};
 					cMap.removeChild(obj);
+					cMap.TilesUpdated();
+
 				} else {
 					obj.set({ x: this.oldX, y: this.oldY, q: this.oldQ, r: this.oldR });
 					cMap.mapTiles[obj.q + "." + obj.r] = obj;
