@@ -133,6 +133,7 @@
 		{
 			"id": "Tile-Dal_Bootha-Xxehan",
 			"src": "DalBoothaXxehan.png",
+			"edition": "TI3",
 			"planets": [
 				{
 					"name": "Dal Bootha",
