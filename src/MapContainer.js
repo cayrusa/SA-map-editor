@@ -25,7 +25,7 @@
 	createjs.extend(MapContainer, createjs.Container);
 
 	MapContainer.prototype.TilesUpdated = function () {
-		const set = Object.keys(this.mapTiles).map(k => this.mapTiles[k].edition)
+		const set = Object.keys(this.mapTiles).map(k => this.mapTiles[k].edition).filter(x => x);
 
 
 		const newTilesets = ([...new Set(set)]).sort();
