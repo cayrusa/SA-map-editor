@@ -24,7 +24,18 @@ legend {
   color: #333;
   border-radius: 5px;
   z-index: 900;
-  padding: 8px;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+summary{
+  display: list-item;
+  cursor: pointer;
+}
+
+legend  ul{
+  margin-top: 0px;
+  margin-bottom: 8px;
 }
 
 
