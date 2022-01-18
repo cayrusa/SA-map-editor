@@ -88,7 +88,6 @@ copyFolderRecursiveSync('./css', './dist/')
 
 console.log('copy index.html');
 copyFileSync('index.html', './dist/index.html')
-copyFileSync('help.html', './dist/help.html')
 console.log('Finish');
 
 
