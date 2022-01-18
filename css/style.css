@@ -238,3 +238,16 @@ dialog#help>a:first-child:target {
   background-color: #AAA;
 
 }
+
+dialog{
+  display: block;
+  transition: top ease-out 600ms;
+}
+dialog:not([open]) {
+  top: -1000px !important;
+}
+dialog[open]{
+  top: 30px;
+
+
+}
