@@ -4,7 +4,8 @@
   "description": "A tool to generate Twilight Imperium Maps for Shattered Ascension",
   "private": true,
   "scripts": {
-    "build": "node scripts/pack.mjs",
+    "build": "node scripts/pack.mjs true",
+    "buildCode": "node scripts/pack.mjs false",
     "dev": "serve dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
