@@ -451,7 +451,7 @@
 				container.addChild(rect, tile);
 
 				if (tile.edition) {
-					text = new createjs.Text(tile.edition, "60px Arial", "#FFF");
+					text = new createjs.Text(tile.edition, "30px Arial", "#FFF");
 					text.x = 2 * offset + col * (tileWidth + 3 * offset);
 					text.y = 2 * offset + row * (tileHeight + 3 * offset) + tileHeight - 60;
 					container.addChild(text);
