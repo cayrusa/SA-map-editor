@@ -93,11 +93,10 @@ async function readFiles(p) {
     }, {});
 }
 
-if (packAssets) {
-    console.log('copy local assets');
-    copyFolderRecursiveSync('./assets', './dist/')
-    copyFolderRecursiveSync('./css', './dist/')
-}
+console.log('copy local assets');
+// The assets folder only contains css sheets and manifests. The actual jpgs and pngs come from the zip extracted earlier in this script
+copyFolderRecursiveSync('./assets', './dist/')
+copyFolderRecursiveSync('./css', './dist/')
 
 console.log('copy index.html');
 copyFileSync('index.html', './dist/index.html')
