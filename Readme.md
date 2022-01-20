@@ -7,6 +7,8 @@ If you have Node installed, run
   to install all dependencys
 - `npm run build`  
    to generate the `dist` folder that you can deploy to your server
+- `npm run buildCode`
+   same as `build`, but does not repackage the assets to save time (assumes `build` has already been run once to get the assets)
 - `npm run dev`  
   to serve the website on local host.
 
