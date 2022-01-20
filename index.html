@@ -36,6 +36,7 @@
 </head>
 
 <body>
+
 	<canvas id="stage"></canvas>
 
 	<div class="content">
@@ -99,7 +100,8 @@
 					</ul>
 				</li>
 				<li>
-					<a href="#">Help</a>
+
+					<a href="#" onclick="toggleHelp()">Help</a>
 				</li>
 				<li>
 					<a href="#">About</a>
@@ -107,6 +109,63 @@
 			</ul>
 		</div>
 	</div>
+
+	<dialog id="help">
+		<a href="#" onclick="toggleHelp()">X</a>
+		<h1>Documentation of SA Map Editor</h1>
+		<p>This is a short documenation fell free to ask questions at the <a
+				href="https://discord.com/channels/149238080832929793/276378456005279744">Discord feedback channel</a>.
+		</p>
+		<p>When starting you should already see <em>Mecatol Rex</em> and a panel to the right with tiles containing
+			Planets</p>
+		<p>Use Drag and drop to pull tiles from the panel onto the map</p>
+		<p>You can use the mouse to drag the map around. Click on an already placed tile and move the mouse while still
+			pressing the left button.</p>
+		<p>To relocate an already placed tile hold <kbd>Alt</kbd> while draging the desired tile.</p>
+		<p>To delete a tile hold <kbd>shift</kbd> and click on the tile you wish to delete. </p>
+		<p>You can zoom the Map using the scroll whele of your mouse.</p>
+		<p>You can also zoom the tiles in the panel with the slider at the bottom</p>
+		<p>Different kinds of tiles can be selected using the <em>Tiles</em> menue at the top. Available are
+		<ul>
+			<li><strong>Planets</strong><br>
+				The panel open at start that contains all planets except the home systems.
+			</li>
+			<li><strong>Special</strong><br>
+				This contains all Empty spaces (including wormholes) and red boarder pices that do not have a plenet.
+			</li>
+			<li><strong>Homesystems</strong><br>
+				This contains all Homesystems and the numbered Placeholder systems.</li>
+			<li><strong>Tokens</strong><br>
+				This contains tokens like Artefacts distantsun tokens and the SA border tokens.</li>
+		</ul>
+		</p>
+		<p>For every planet tile in the panel there is a text in the lower left corner. This defines the game the tile
+			is in cluded
+		<ul>
+			<li><strong>TI3</strong>: The Twilight Imperium 3 base game</li>
+			<li><strong>TI3:SE</strong>: Shatterd Empier expansion for The Twilight Imperium 3</li>
+			<li><strong>TI3:SotT</strong>: Shards of the Thron expansion for The Twilight Imperium 3</li>
+			<li><strong>SA</strong>: Shatterd Accension Fan expension. You need to print this out if you want to play
+				phyicly</li>
+		</ul>
+		In the left upper corner of the map is a menue <em>Tilesets</em>. You can open it with a mouse click. It will
+		list all Expensions needed to build the displayed map. <small>(Currently only tiles are checked)</small>
+		</p>
+	</dialog>
+
+	<script>
+		function toggleHelp() {
+			const helpDialog = document.getElementById('help');
+			if (helpDialog.classList.contains('open')) {
+				helpDialog.classList.remove('open')
+			} else {
+				helpDialog.classList.add('open');
+			}
+
+			return false;
+		}
+	</script>
+
 </body>
 
 </html>
