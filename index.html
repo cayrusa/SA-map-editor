@@ -100,8 +100,8 @@
 					</ul>
 				</li>
 				<li>
-					
-					<a href="#" onclick="(function() {  document.getElementById('help').open = !document.getElementById('help').open; return false;  })()">Help</a>
+
+					<a href="#" onclick="toggleHelp()">Help</a>
 				</li>
 				<li>
 					<a href="#">About</a>
@@ -110,10 +110,12 @@
 		</div>
 	</div>
 
-	<dialog id="help" >
-		<a href="#" onclick="(function() {  document.getElementById('help').open = false; return false;  })()" >X</a>
+	<dialog id="help">
+		<a href="#" onclick="toggleHelp()">X</a>
 		<h1>Documentation of SA Map Editor</h1>
-		<p>This is a short documenation fell free to ask questions at the <a href="https://discord.com/channels/149238080832929793/276378456005279744">Discord feedback channel</a>.</p>
+		<p>This is a short documenation fell free to ask questions at the <a
+				href="https://discord.com/channels/149238080832929793/276378456005279744">Discord feedback channel</a>.
+		</p>
 		<p>When starting you should already see <em>Mecatol Rex</em> and a panel to the right with tiles containing
 			Planets</p>
 		<p>Use Drag and drop to pull tiles from the panel onto the map</p>
@@ -150,6 +152,19 @@
 		list all Expensions needed to build the displayed map. <small>(Currently only tiles are checked)</small>
 		</p>
 	</dialog>
+
+	<script>
+		function toggleHelp() {
+			const helpDialog = document.getElementById('help');
+			if (helpDialog.classList.contains('open')) {
+				helpDialog.classList.remove('open')
+			} else {
+				helpDialog.classList.add('open');
+			}
+
+			return false;
+		}
+	</script>
 
 </body>
 

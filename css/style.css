@@ -243,10 +243,10 @@ dialog{
   display: block;
   transition: top ease-out 600ms;
 }
-dialog:not([open]) {
+dialog:not(.open) {
   top: -1000px !important;
 }
-dialog[open]{
+dialog.open{
   top: 30px;
 
 
