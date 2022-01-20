@@ -7,9 +7,10 @@
 // The idea is that once you have packaged the assets in the dist folder, there is no need to do it again (unless the assets change of course)
 // every time you build the application to try a code change
 const packAssets = process.argv[2] == "true"
-console.log("packAssets", packAssets)
-if (!packAssets) {
-    console.log("packAssets flag false -> not packing asset files")
+if (packAssets) {
+    console.log("packAssets", packAssets)
+} else {
+    console.log("packAssets false -> not packing asset files")
 }
 
 import { promises as fs } from "fs";
