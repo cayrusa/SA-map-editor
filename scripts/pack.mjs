@@ -3,6 +3,15 @@
 
 "use strict";
 
+// Boolean flag to determine whether assets should be downloaded/extracted/copied to dist folder
+// The idea is that once you have packaged the assets in the dist folder, there is no need to do it again (unless the assets change of course)
+// every time you build the application to try a code change
+const packAssets = process.argv[2] == "true"
+if (packAssets) {
+    console.log("packAssets", packAssets)
+} else {
+    console.log("packAssets false -> not packing asset files")
+}
 
 import { promises as fs } from "fs";
 import extract from 'extract-zip';
@@ -30,29 +39,32 @@ const srcFiles = await readFiles('./src');
 
 // console.log(libFiles)
 
-if (!fsync.existsSync('./tmp/assets.zip')) {
-    console.log('Downloading assets')
-    const download = new Promise(resolve => {
-
-        https.get('https://www.astralvault.net/games/SA/MapEditor/assets.zip', async res => {
-
-            const path = './tmp/assets.zip';
-            const filePath = fsync.createWriteStream(path);
-            res.pipe(filePath);
-            filePath.on('finish', () => {
-                filePath.close();
-                console.log('Download Completed');
-                resolve();
+if (packAssets) {
+    if (!fsync.existsSync('./tmp/assets.zip')) {
+        console.log('Downloading assets')
+        const download = new Promise(resolve => {
+    
+            https.get('https://www.astralvault.net/games/SA/MapEditor/assets.zip', async res => {
+    
+                const path = './tmp/assets.zip';
+                const filePath = fsync.createWriteStream(path);
+                res.pipe(filePath);
+                filePath.on('finish', () => {
+                    filePath.close();
+                    console.log('Download Completed');
+                    resolve();
+                })
             })
-        })
-    });
-    await download;
+        });
+        await download;
+    }
+
+    console.log('extracting assets...')
+    await extract('./tmp/assets.zip', { dir: path.join(__dirname, '..', 'dist', 'assets') })
+    console.log('assets extracted')
 }
 
 
-console.log('extracting assets...')
-await extract('./tmp/assets.zip', { dir: path.join(__dirname, '..', 'dist', 'assets') })
-console.log('assets extracted')
 
 console.log('minifiying...')
 const minified = minify({ ...libFiles, ...srcFiles }, { sourceMap: { url: 'TI3SA.min.js.map', includeSources: true, names: true, root: 'src' } })
@@ -83,6 +95,7 @@ async function readFiles(p) {
 }
 
 console.log('copy local assets');
+// The assets folder only contains css sheets and manifests. The actual jpgs and pngs come from the zip extracted earlier in this script
 copyFolderRecursiveSync('./assets', './dist/')
 copyFolderRecursiveSync('./css', './dist/')
 
