@@ -154,6 +154,14 @@ function tick(event) {
 	stage.update();
 };
 
+function displayHelp() {
+	swal({
+  		title: "Help",
+  		text: "- Shift + click on a tile/token/etc to remove it\n- Maintain Alt and drag a tile/token/etc to move it",
+  		/*icon: "info",*/
+	});
+}
+
 function loadertick(event){
 	if (loaderbar){
 		if (loaderbar.alpha == 0){
@@ -177,6 +185,7 @@ function loadertick(event){
 			$("#tts a").on("click", function(){ notYet(); });
 			$("#load a").on("click", function(){ cMap.loadJSON(); });
 			$("#new a").on("click", function(){ cMap.newMap(); });
+			$("#help a").on("click", function(){ displayHelp(); });
 		};
 		stage.update();
 	};
